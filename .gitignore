@@ -28,3 +28,9 @@ Thumbs.db
 # 忽略其他常见的编译文件和缓存
 *.bak
 *.swp
+
+/gaze_data/
+/processed_data/
+/stimul_videos/
+/资料/
+*.rar

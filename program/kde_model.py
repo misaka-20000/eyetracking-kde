@@ -59,7 +59,7 @@ def kde_one_frame(video_idx, frame_idx, subjects, threshold=0.68):
 
     if pts.size <= 1:
         # print(f'视频{video_idx}，帧号{frame_idx}没有足够的数据')
-        return -1  # 凝视点太少，无法计算kde
+        return 1  # 凝视点太少，或该帧不存在，无法计算kde
 
     kde_model = gaussian_kde(pts.T, bw_method='silverman')
     x_grid, y_grid = np.mgrid[0.:1:500j, 0.:1:500j]  # 这里的 (0., 1.) 可以根据数据范围调整
